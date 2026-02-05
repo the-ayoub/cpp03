@@ -1,4 +1,4 @@
-NAME			= claptrap
+NAME			= ScavTrap
 
 CC				= c++
 CFLAGS			= -Wall -Wextra -Werror  -std=c++98
@@ -8,9 +8,9 @@ SRCDIR			= src
 OBJDIR			= obj
 DEPDIR			= deps
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
-HEADERS = ClapTrap.hpp
+HEADERS = ClapTrap.hpp ScavTrap.hpp
 
 OBJS			= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 DEPS			= $(OBJS:%.o=$(DEPDIR)/%.d)
@@ -19,7 +19,7 @@ all: dir $(NAME)
 
 $(NAME): Makefile $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@echo "\033[1;33mCPP03 EX00 [✔]\033[0m"
+	@echo "\033[1;33mCPP03 EX01 [✔]\033[0m"
 
 
 $(OBJDIR)/%.o: %.cpp $(HEADERS) Makefile
