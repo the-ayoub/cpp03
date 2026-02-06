@@ -1,4 +1,4 @@
-NAME			= ScavTrap
+NAME			= FragTrap
 
 CC				= c++
 CFLAGS			= -Wall -Wextra -Werror  -std=c++98
@@ -8,9 +8,9 @@ SRCDIR			= src
 OBJDIR			= obj
 DEPDIR			= deps
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
-HEADERS = ClapTrap.hpp ScavTrap.hpp
+HEADERS = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 OBJS			= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 DEPS			= $(OBJS:%.o=$(DEPDIR)/%.d)

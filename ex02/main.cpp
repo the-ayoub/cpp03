@@ -1,26 +1,20 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-	std::cout << "\n--- 1. Orthodox Canonical Form tests ---" << std::endl;
-	ScavTrap Chispitas("Chispitas");
-	ScavTrap Tornillín;
-	ScavTrap Cabezón(Chispitas);
-	Tornillín = Chispitas;
-	Chispitas.guardGate();
-	std::cout << "\n\n--- 2. Logic tests for functions ---" << std::endl;
-	ScavTrap Luchador("Luchador");
-	ScavTrap Zombe("Zombe");
-	for(int i=0;i<8;i++)
-		Luchador.attack("Zombe");
-	Zombe.takeDamage(8);
-	Zombe.beRepaired(2);
-	for(int i=0;i<6;i++)
-		Chispitas.attack("zombie");
-	Zombe.takeDamage(6);
-	Zombe.attack("Luchador");
-	for(int i=0;i<4;i++)
-		Luchador.attack("Zombie");
-	Zombe.takeDamage(6);
-	Zombe.guardGate();
+    std::cout << "\n--- 1. PRUEBAS DE CREACION (FRAGTRAP) ---" << std::endl;
+    {
+        FragTrap Fiestero("Fiestero");
+        FragTrap Copia(Fiestero);
+    } 
+
+    std::cout << "\n\n--- 2. PRUEBAS DE LOGICA Y FIESTA ---" << std::endl;
+    FragTrap Pepe("Pepe");
+    ClapTrap Diana("Diana");
+    Pepe.attack("Diana");
+    Diana.takeDamage(30);
+    Pepe.takeDamage(99);
+    Pepe.beRepaired(50);
+    Pepe.highFivesGuys();
+    return 0;
 }
