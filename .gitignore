@@ -1,0 +1,8 @@
+# Build artifacts
+*/obj/
+*/deps/
+
+# Binaries
+ex00/claptrap
+ex01/ScavTrap
+ex02/FragTrap
